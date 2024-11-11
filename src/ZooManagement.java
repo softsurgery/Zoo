@@ -4,5 +4,10 @@ public class ZooManagement {
         Animal tigre = new Animal("Feline","Xao",2,true);
         Animal requin = new Animal("Poisson","ShiShi",3,false);
         Zoo myZoo = new Zoo("Hello Zoo","New York",10);
+
+        myZoo.displayZoo();
+
+        System.out.println(myZoo);
+        System.out.println(myZoo.toString());
     }
 }
