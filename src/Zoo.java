@@ -1,24 +1,42 @@
-public class Zoo {
+public class Zoo<T> {
     Animal[] animals;
     String name;
     String city;
     int nbrCages;
-    int counteur;
+    int counter;
 
     public Zoo(String name, String city, int nbrCages ) {
         this.animals = new Animal[nbrCages];
-        this.counteur = 0;
+        this.counter = 0;
         this.name = name;
         this.city = city;
         this.nbrCages = nbrCages;
     }
 
-    boolean addAnimal(Animal animal){
-        if(counteur < nbrCages) {
-            animals[counteur] = animal;
-            counteur++;
+    public boolean addAnimal(Animal animal){
+        if(counter < nbrCages) {
+            animals[counter] = animal;
+            counter++;
             return true;
         } else return false;
+    }
+
+    public void displayAllAnimals(){
+        for(int i=0; i<counter; i++){
+            System.out.println("Animal " + (i+1) + ":");
+            System.out.println(animals[i] + "\n");
+        }
+    }
+
+    public int searchAnimal(Animal animal){
+        int i = 0;
+        boolean found = false;
+        while(i < counter && !found) {
+            if (animals[i].name.equals(animal.name)) found = true;
+            else i++;
+        }
+        if(found) return i;
+        else return -1;
     }
 
     @Override

@@ -2,25 +2,20 @@ public class ZooManagement {
     public static void main(String[] args) {
         Animal lion = new Animal("Feline", "Leo", 5, true);
         Animal tigre = new Animal("Feline", "Xao", 2, true);
-        Animal requin = new Animal("Poisson", "ShiShi", 3, false);
-        Zoo myZoo = new Zoo("Hello Zoo", "New York", 2);
+        Animal requin = new Animal("Fish", "ShiShi", 3, false);
+        Zoo<Animal> myZoo = new Zoo<Animal>("Hello Zoo", "New York", 5);
 
-        if (myZoo.addAnimal(lion)){
-            System.out.println("Lion added successfully");
-        } else {
-            System.out.println("No more cages available");
-        }
+        myZoo.addAnimal(lion);
+        myZoo.addAnimal(tigre);
 
-        if (myZoo.addAnimal(tigre)){
-            System.out.println("Tigre added successfully");
-        } else {
-            System.out.println("No more cages available");
-        }
+        myZoo.displayAllAnimals();
 
-        if (myZoo.addAnimal(requin)){
-            System.out.println("Requin added successfully");
-        } else {
-            System.out.println("No more cages available");
-        }
+        int pos1 = myZoo.searchAnimal(requin);
+        if (pos1 != -1) System.out.println("Position of Requin in Zoo: " + pos1);
+        else System.out.println("Requin not found in Zoo");
+
+        int pos2 = myZoo.searchAnimal(lion);
+        if (pos2 != -1) System.out.println("Position of Lion in Zoo: " + pos2);
+        else System.out.println("Lion not found in Zoo");
     }
 }
