@@ -11,9 +11,10 @@ public class Zoo {
         this.nbrCages = nbrCages;
     }
 
-    public void displayZoo(){
-        System.out.println("Zoo Name: " + name);
-        System.out.println("City: " + city);
-        System.out.println("Number of Cages: " + nbrCages);
+    @Override
+    public String toString() {
+        return "Zoo Name:" + name + "\n" +
+                "City: "+ city +"\n" +
+                "Number of Cages: " + nbrCages;
     }
 }
