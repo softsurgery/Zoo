@@ -1,12 +1,16 @@
 public class ZooManagement {
     public static void main(String[] args) {
         Animal lion = new Animal("Feline", "Leo", 5, true);
+        Animal lion2 = new Animal("Feline", "Leonardo", 7, true);
         Animal tigre = new Animal("Feline", "Xao", 2, true);
         Animal requin = new Animal("Fish", "ShiShi", 3, false);
         Zoo<Animal> myZoo = new Zoo<Animal>("Hello Zoo", "New York", 5);
 
         myZoo.addAnimal(lion);
+        myZoo.addAnimal(lion);
         myZoo.addAnimal(tigre);
+
+        System.out.println(lion.equals(lion2));
 
         myZoo.displayAllAnimals();
 

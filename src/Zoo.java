@@ -15,10 +15,14 @@ public class Zoo<T> {
 
     public boolean addAnimal(Animal animal){
         if(counter < nbrCages) {
-            animals[counter] = animal;
-            counter++;
-            return true;
-        } else return false;
+            int pos = searchAnimal(animal);
+            if (pos == -1){
+                animals[counter] = animal;
+                counter++;
+                return true;
+            }
+        }
+        return false;
     }
 
     public void displayAllAnimals(){
@@ -32,7 +36,7 @@ public class Zoo<T> {
         int i = 0;
         boolean found = false;
         while(i < counter && !found) {
-            if (animals[i].name.equals(animal.name)) found = true;
+            if (animals[i].equals(animal)) found = true;
             else i++;
         }
         if(found) return i;

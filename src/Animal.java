@@ -12,6 +12,13 @@ public class Animal {
     }
 
     @Override
+    public final boolean equals(Object o) {
+        if (!(o instanceof Animal animal)) return false;
+
+        return isMammal == animal.isMammal && family.equals(animal.family) && name.equals(animal.name);
+    }
+
+    @Override
     public String toString() {
         return "Animal Name:" + name + "\n" +
                 "Family: "+ family +"\n" +
