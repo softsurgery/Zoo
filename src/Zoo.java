@@ -25,6 +25,18 @@ public class Zoo<T> {
         return false;
     }
 
+    public boolean removeAnimal(Animal animal){
+        int pos = searchAnimal(animal);
+        if(pos!= -1){
+            for(int i=pos; i<counter-1; i++){
+                animals[i] = animals[i+1];
+            }
+            counter--;
+            return true;
+        }
+        return false;
+    }
+
     public void displayAllAnimals(){
         for(int i=0; i<counter; i++){
             System.out.println("Animal " + (i+1) + ":");
