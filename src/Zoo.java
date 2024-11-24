@@ -19,6 +19,7 @@ public class Zoo<T> {
                 animals[counter] = animal;
                 counter++;
                 return true;
+
             }
         }
         return false;
@@ -52,6 +53,10 @@ public class Zoo<T> {
         }
         if(found) return i;
         else return -1;
+    }
+
+    boolean isZooFull(){
+        return counter == nbrCages;
     }
 
     @Override
