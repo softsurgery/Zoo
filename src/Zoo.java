@@ -11,9 +11,11 @@ public class Zoo<T> {
         this.name = name;
         this.city = city;
     }
-
+    boolean isZooFull(){
+        return counter == nbrCages;
+    }
     public boolean addAnimal(Animal animal){
-        if(counter < nbrCages) {
+        if(!isZooFull()) {
             int pos = searchAnimal(animal);
             if (pos == -1){
                 animals[counter] = animal;
@@ -55,9 +57,7 @@ public class Zoo<T> {
         else return -1;
     }
 
-    boolean isZooFull(){
-        return counter == nbrCages;
-    }
+
     static Zoo comparerZoo(Zoo z1, Zoo z2){
         if(z1.counter > z2.counter) return z1;
         else if(z1.counter < z2.counter) return z2;
