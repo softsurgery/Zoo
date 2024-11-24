@@ -58,7 +58,11 @@ public class Zoo<T> {
     boolean isZooFull(){
         return counter == nbrCages;
     }
-
+    static Zoo comparerZoo(Zoo z1, Zoo z2){
+        if(z1.counter > z2.counter) return z1;
+        else if(z1.counter < z2.counter) return z2;
+        else return null;
+    }
     @Override
     public String toString() {
         return "Zoo Name:" + name + "\n" +

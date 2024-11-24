@@ -10,6 +10,8 @@ public class ZooManagement {
         myZoo.addAnimal(lion);
         myZoo.addAnimal(tigre);
 
+        Zoo clone = Zoo.comparerZoo(myZoo,new Zoo("Zoo","Bizertz"));
+
         System.out.println(lion.equals(lion2));
 
         myZoo.displayAllAnimals();
