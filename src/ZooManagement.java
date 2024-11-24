@@ -4,7 +4,7 @@ public class ZooManagement {
         Animal lion2 = new Animal("Feline", "Leonardo", 7, true);
         Animal tigre = new Animal("Feline", "Xao", 2, true);
         Animal requin = new Animal("Fish", "ShiShi", 3, false);
-        Zoo<Animal> myZoo = new Zoo<Animal>("Hello Zoo", "New York", 5);
+        Zoo<Animal> myZoo = new Zoo<Animal>("Hello Zoo", "New York");
 
         myZoo.addAnimal(lion);
         myZoo.addAnimal(lion);

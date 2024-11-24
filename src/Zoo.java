@@ -2,15 +2,14 @@ public class Zoo<T> {
     Animal[] animals;
     String name;
     String city;
-    int nbrCages;
+    final int nbrCages = 25;
     int counter;
 
-    public Zoo(String name, String city, int nbrCages ) {
+    public Zoo(String name, String city ) {
         this.animals = new Animal[nbrCages];
         this.counter = 0;
         this.name = name;
         this.city = city;
-        this.nbrCages = nbrCages;
     }
 
     public boolean addAnimal(Animal animal){
