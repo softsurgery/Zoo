@@ -1,9 +1,46 @@
-public class Zoo<T> {
-    Animal[] animals;
-    String name;
-    String city;
-    final int nbrCages = 25;
-    int counter;
+public class Zoo{
+    private Animal[] animals;
+    private String name;
+    private String city;
+    private final int nbrCages = 25;
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
+
+    public int getNbrCages() {
+        return nbrCages;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if(!name.isEmpty()) this.name = name;
+    }
+
+    public Animal[] getAnimals() {
+        return animals;
+    }
+
+    public void setAnimals(Animal[] animals) {
+        this.animals = animals;
+    }
+
+    private int counter;
 
     public Zoo(String name, String city ) {
         this.animals = new Animal[nbrCages];
