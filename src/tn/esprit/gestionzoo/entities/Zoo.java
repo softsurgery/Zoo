@@ -1,3 +1,5 @@
+package tn.esprit.gestionzoo.entities;
+
 public class Zoo{
     private Animal[] animals;
     private String name;
@@ -78,7 +80,7 @@ public class Zoo{
 
     public void displayAllAnimals(){
         for(int i=0; i<counter; i++){
-            System.out.println("Animal " + (i+1) + ":");
+            System.out.println("tn.esprit.gestionzoo.entities.Animal " + (i+1) + ":");
             System.out.println(animals[i] + "\n");
         }
     }
@@ -95,7 +97,7 @@ public class Zoo{
     }
 
 
-    static Zoo comparerZoo(Zoo z1, Zoo z2){
+    public static Zoo comparerZoo(Zoo z1, Zoo z2){
         if(z1.counter > z2.counter) return z1;
         else if(z1.counter < z2.counter) return z2;
         else return null;
