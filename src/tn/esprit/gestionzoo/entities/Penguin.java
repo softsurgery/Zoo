@@ -6,7 +6,7 @@ public class Penguin extends Aquatic {
     public float getSwimmingDepth() {
         return swimmingDepth;
     }
-    
+
     public void setSwimmingDepth(float swimmingDepth) {
         this.swimmingDepth = swimmingDepth;
     }
