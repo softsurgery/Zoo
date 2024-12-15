@@ -17,6 +17,10 @@ public class ZooManagement {
        d.swim();
        Penguin p = new Penguin("Bird", "Peng",5,false,"Pacific Ocean",150);
        System.out.println(p);
+
+       z.addAquaticAnimal(a);
+       z.addAquaticAnimal(d);
+       z.addAquaticAnimal(p);
        p.swim();
     }
 }
