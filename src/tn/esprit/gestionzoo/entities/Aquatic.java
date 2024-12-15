@@ -15,4 +15,13 @@ public class Aquatic  extends Animal{
         super(family, name, age, isMammal);
         this.habitat = habitat;
     }
+
+    @Override
+    public String toString() {
+        return "Animal Aquatic Name:" + super.getName() + "\n" +
+                "Family: "+ super.getFamily() +"\n" +
+                "Age : " + super.getAge() + "\n" +
+                "Is Mammal: " + super.isMammal() + "\n" +
+                "Habitat: " + habitat;
+    }
 }

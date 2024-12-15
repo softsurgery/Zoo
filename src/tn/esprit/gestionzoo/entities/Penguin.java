@@ -15,4 +15,14 @@ public class Penguin extends Aquatic {
         super(family, name, age, isMammal, habitat);
         this.swimmingDepth = swimmingDepth;
     }
+
+    @Override
+    public String toString() {
+        return "Penguin Name:" + super.getName() + "\n" +
+                "Family: "+ super.getFamily() +"\n" +
+                "Age : " + super.getAge() + "\n" +
+                "Is Mammal: " + super.isMammal() + "\n" +
+                "Habitat: " + super.getHabitat() + "\n" +
+                "Swimming Depth: " + swimmingDepth;
+    }
 }
