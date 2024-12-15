@@ -15,6 +15,7 @@ public class ZooManagement {
        z.addAquaticAnimal(p1);
        z.addAquaticAnimal(p2);
 
-       System.out.println(z.maxPenguinSwimmingDepth());
+
+       z.displayNumberOfAquaticsByType();
     }
 }

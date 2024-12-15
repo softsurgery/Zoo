@@ -167,6 +167,17 @@ public class Zoo{
         return max;
     }
 
+    public void displayNumberOfAquaticsByType(){
+        int cp = 0;
+        int cd = 0;
+        for(int i = 0; i < aquaticCounter ; i++) {
+            if (aquaticAnimals[i] instanceof Penguin) cp++;
+            else if (aquaticAnimals[i] instanceof Dolphin) cd++;
+        }
+        System.out.println("Number of Penguins: " + cp);
+        System.out.println("Number of Dolphins: " + cd);
+    }
+
     @Override
     public String toString() {
         return "Zoo Name:" + name + "\n" +
