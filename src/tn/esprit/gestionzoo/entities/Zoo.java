@@ -2,6 +2,7 @@ package tn.esprit.gestionzoo.entities;
 
 public class Zoo{
     private Animal[] animals;
+    private Aquatic[] aquaticAnimals = new Aquatic[10];
     private String name;
     private String city;
     private final int nbrCages = 25;
@@ -96,12 +97,12 @@ public class Zoo{
         else return -1;
     }
 
-
     public static Zoo comparerZoo(Zoo z1, Zoo z2){
         if(z1.counter > z2.counter) return z1;
         else if(z1.counter < z2.counter) return z2;
         else return null;
     }
+
     @Override
     public String toString() {
         return "Zoo Name:" + name + "\n" +
