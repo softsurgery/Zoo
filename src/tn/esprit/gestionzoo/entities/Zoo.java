@@ -122,6 +122,12 @@ public class Zoo{
         }
     }
 
+    public void makeAquaticSwim(){
+        for(int i=0; i<aquaticCounter; i++){
+           aquaticAnimals[i].swim();
+        }
+    }
+
     public int searchAnimal(Animal animal){
         int i = 0;
         boolean found = false;
