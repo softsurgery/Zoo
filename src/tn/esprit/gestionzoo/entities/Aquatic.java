@@ -1,5 +1,7 @@
 package tn.esprit.gestionzoo.entities;
 
+import java.util.Objects;
+
 public abstract class Aquatic extends Animal{
     private String habitat;
 
@@ -17,6 +19,12 @@ public abstract class Aquatic extends Animal{
     }
 
     public abstract void swim();
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Aquatic aquatic)) return false;
+        return aquatic.getAge() == super.getAge() && aquatic.getName().equals(super.getName()) && aquatic.getHabitat().equals(habitat);
+    }
 
     @Override
     public String toString() {
