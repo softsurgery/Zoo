@@ -77,30 +77,20 @@ public class Zoo{
         return counter == nbrCages;
     }
 
-    public boolean addAnimal(Animal animal){
-        if(!isZooFull()) {
-            int pos = searchAnimal(animal);
-            if (pos == -1){
-                animals[counter] = animal;
-                counter++;
-                return true;
-
-            }
+    public void addAnimal(Animal animal){
+        int pos = searchAnimal(animal);
+        if (pos == -1){
+            animals[counter] = animal;
+            counter++;
         }
-        return false;
     }
 
-    public boolean addAquaticAnimal(Aquatic aquatic){
-        if(aquaticCounter < 10) {
-            int pos = searchAquatic(aquatic);
-            if (pos == -1){
-                aquaticAnimals[aquaticCounter] = aquatic;
-                aquaticCounter++;
-                return true;
-
-            }
+    public void addAquaticAnimal(Aquatic aquatic){
+        int pos = searchAquatic(aquatic);
+        if (pos == -1){
+            aquaticAnimals[aquaticCounter] = aquatic;
+            aquaticCounter++;
         }
-        return false;
     }
 
     public boolean removeAnimal(Animal animal){
